@@ -1,6 +1,8 @@
 import articleCover from "@/assets/article-cover.jpg";
 import articleArchitecture from "@/assets/article-architecture.jpg";
 import articleMetrics from "@/assets/article-metrics.jpg";
+import articleK8s from "@/assets/article-k8s.jpg";
+import articleDatacenter from "@/assets/article-datacenter.jpg";
 
 export type Article = {
   slug: string;
@@ -149,8 +151,8 @@ export const articles: Article[] = [
     category: "DevOps",
     date: "28 Fev 2026",
     readTime: "12 min",
-    cover: articleCover,
-    content: `# Kubernetes autogerenciado\n\nEm breve — conteúdo completo deste artigo.\n\n> Placeholder de exemplo. Substitua pelo conteúdo real em \`src/data/articles.ts\`.`,
+    cover: articleK8s,
+    content: kubernetesContent,
   },
   {
     slug: "go-vs-nodejs-stack-certa",
