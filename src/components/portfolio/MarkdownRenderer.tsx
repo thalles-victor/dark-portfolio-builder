@@ -106,8 +106,8 @@ const MarkdownRenderer = ({ content }: Props) => {
                     </span>
                     <div className="flex gap-1.5">
                       <span className="w-2.5 h-2.5 rounded-full bg-destructive/60" />
-                      <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />
-                      <span className="w-2.5 h-2.5 rounded-full bg-green-500/60" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-primary/40" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-accent/60" />
                     </div>
                   </div>
                   <SyntaxHighlighter
