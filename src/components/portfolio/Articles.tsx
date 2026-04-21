@@ -1,61 +1,6 @@
 import { Calendar, Clock, ArrowUpRight } from "lucide-react";
-
-const articles = [
-  {
-    title: "Construindo APIs escaláveis com NestJS e Redis",
-    excerpt:
-      "Como projetar camadas de cache, filas com BullMQ e rate limiting para APIs que precisam suportar milhões de requisições.",
-    category: "Backend",
-    date: "12 Mar 2026",
-    readTime: "8 min",
-    url: "#",
-  },
-  {
-    title: "Kubernetes autogerenciado: o que aprendi montando clusters do zero",
-    excerpt:
-      "Decisões, armadilhas e ganhos reais ao operar Kubernetes sem usar EKS ou GKE — e quando vale a pena.",
-    category: "DevOps",
-    date: "28 Fev 2026",
-    readTime: "12 min",
-    url: "#",
-  },
-  {
-    title: "Go vs Node.js: escolhendo a stack certa para cada serviço",
-    excerpt:
-      "Critérios práticos baseados em experiência real para decidir entre Go e Node.js em microsserviços.",
-    category: "Arquitetura",
-    date: "10 Fev 2026",
-    readTime: "6 min",
-    url: "#",
-  },
-  {
-    title: "Observabilidade com Grafana, Loki e Prometheus",
-    excerpt:
-      "Stack completa de observabilidade para sistemas distribuídos — métricas, logs e traces sem dor de cabeça.",
-    category: "Observabilidade",
-    date: "22 Jan 2026",
-    readTime: "10 min",
-    url: "#",
-  },
-  {
-    title: "RBAC bem feito: padrões para controle de acesso em APIs REST",
-    excerpt:
-      "Da modelagem de permissões à implementação com guards e decorators em NestJS.",
-    category: "Segurança",
-    date: "05 Jan 2026",
-    readTime: "7 min",
-    url: "#",
-  },
-  {
-    title: "CI/CD pragmático com GitHub Actions e Docker",
-    excerpt:
-      "Pipelines simples, rápidos e reproduzíveis para entregar software com confiança várias vezes ao dia.",
-    category: "DevOps",
-    date: "18 Dez 2025",
-    readTime: "9 min",
-    url: "#",
-  },
-];
+import { Link } from "react-router-dom";
+import { articles } from "@/data/articles";
 
 const Articles = () => {
   return (
@@ -74,9 +19,9 @@ const Articles = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {articles.map((a) => (
-            <a
-              key={a.title}
-              href={a.url}
+            <Link
+              key={a.slug}
+              to={`/artigos/${a.slug}`}
               className="group card-gradient rounded-xl border border-border p-6 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-card)] flex flex-col"
             >
               <div className="flex items-center justify-between mb-4">
@@ -104,12 +49,12 @@ const Articles = () => {
                   <Clock size={12} /> {a.readTime}
                 </span>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
 
         <p className="font-mono text-xs text-muted-foreground/70 text-center mt-10">
-          // artigos de exemplo — substitua pelos seus artigos reais
+          // artigos de exemplo — substitua pelos seus em src/data/articles.ts
         </p>
       </div>
     </section>
