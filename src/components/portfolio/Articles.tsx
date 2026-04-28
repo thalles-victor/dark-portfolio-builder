@@ -2,7 +2,7 @@ import { Calendar, Clock, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { articles } from "@/data/articles";
 
-const Articles = () => {
+function Articles() {
   return (
     <section id="artigos" className="py-24 relative">
       <div className="container">
@@ -12,8 +12,8 @@ const Articles = () => {
             Compartilhando <span className="text-gradient">conhecimento</span>.
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Reflexões e tutoriais sobre arquitetura, backend, DevOps e tudo mais que
-            aprendo no caminho. Construir e ensinar caminham juntos.
+            Reflexões e tutoriais sobre arquitetura, backend, DevOps e tudo mais
+            que aprendo no caminho. Construir e ensinar caminham juntos.
           </p>
         </div>
 
@@ -59,6 +59,6 @@ const Articles = () => {
       </div>
     </section>
   );
-};
+}
 
 export default Articles;
