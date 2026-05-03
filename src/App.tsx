@@ -15,6 +15,10 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <div className="flex flex-row w-full h-30 items-center justify-center bg-gray-600 gap-10">
+          <h1>WebSite under development</h1>
+          <h1>Site em desenvolvimento</h1>
+        </div>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/artigos/:slug" element={<ArticlePage />} />
