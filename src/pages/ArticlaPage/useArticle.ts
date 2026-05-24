@@ -1,6 +1,6 @@
 import { articles, getArticleBySlug } from "@/data/articles";
 import { toast } from "@/hooks/use-toast";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 export function useArticle() {
